@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class  Counter extends Component {
   state = {
-    counter: 0,
+    counter: this.props.value,
     tags: ['shoe1', 'shoe2', 'shoe3']
   };
 
@@ -21,6 +21,9 @@ class  Counter extends Component {
   }
 
   render() {
+
+    console.log("props", this.props);
+
     return (
     <React.Fragment>
       <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
