@@ -8,9 +8,9 @@ class  Counter extends Component {
   //   this.handleIncrement = this.handleIncrement.bind(this);
   // }
 
-  doHandleIncrement = () => {
-    this.handleIncrement( { id: 1});
-  }
+  // doHandleIncrement = () => {
+  //   this.handleIncrement( { id: 1});
+  // }
 
   render() {
     return (
@@ -29,8 +29,8 @@ class  Counter extends Component {
   }
 
   formatCount() {
-    const { counter } = this.props.counter;
-    return counter === 0 ? "Zero" : counter;
+    const {value } = this.props.counter;
+    return value === 0 ? "Zero" : value;
   }
 }
  
