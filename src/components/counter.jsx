@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
 
 class  Counter extends Component {
-  
 
-  // constructor() {
-  //   super();
-  //   this.handleIncrement = this.handleIncrement.bind(this);
-  // }
+  componentDidUpdate(prevProps, prevState) {
+    console.log("prevProps", prevProps);
+    console.log("prevState", prevState);
+    if(prevProps.counter.value !== this.props.counter.value) {
+      // Make Ajax call to update new data
+    } 
+  }
 
-  // doHandleIncrement = () => {
-  //   this.handleIncrement( { id: 1});
-  // }
+  componentWillUnmount() {
+    console.log("Counter -Unmount")
+  }
 
   render() {
+    console.log('Counter - rendered');
     return (
     <React.Fragment>
       <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
